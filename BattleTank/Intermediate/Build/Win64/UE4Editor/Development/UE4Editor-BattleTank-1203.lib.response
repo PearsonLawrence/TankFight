@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BattleTank-1203.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTank.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTankGameModeBase.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Tank.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankPlayerController.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Projectile.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankAIController1.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankAimingComponent.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankBarrel.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankMovementComponent.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankPawn.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankTrack.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankTurret.cpp.obj"
+"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTank.generated.cpp.obj"
+"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\PCLaunch.rc.res"
+"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1203.lib"
