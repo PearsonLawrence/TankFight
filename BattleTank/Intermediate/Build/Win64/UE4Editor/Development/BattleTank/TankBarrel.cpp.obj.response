@@ -23,10 +23,10 @@
 /wd4838
 /w44668
 /I "D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Source"
-/I C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Source
-/I C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Source\BattleTank\Public
-/I C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank
-/I C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Source\BattleTank
+/I C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Source
+/I C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Source\BattleTank\Public
+/I C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Inc\BattleTank
+/I C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Source\BattleTank
 /I "D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Source\Runtime\Core\Public"
 /I "D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Source\Runtime\Core\Public\Async"
@@ -318,9 +318,9 @@
 /FI"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Source\BattleTank\Private\TankBarrel.cpp"
-/FI"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h"
-/Fo"C:\Users\pears\Desktop\Tank\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankBarrel.cpp.obj"
+"C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Source\BattleTank\Private\TankBarrel.cpp"
+/FI"C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\Definitions.BattleTank.h"
+/Fo"C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankBarrel.cpp.obj"
 /TP
 /GR-
 /W4
