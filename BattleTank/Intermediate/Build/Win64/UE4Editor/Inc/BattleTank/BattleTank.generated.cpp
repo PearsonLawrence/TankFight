@@ -38,6 +38,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankAIController1();
 	BATTLETANK_API class UEnum* Z_Construct_UEnum_BattleTank_EFiringStatus();
 	BATTLETANK_API class UFunction* Z_Construct_UFunction_UTankAimingComponent_Fire();
+	BATTLETANK_API class UFunction* Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft();
 	BATTLETANK_API class UFunction* Z_Construct_UFunction_UTankAimingComponent_Initialise();
 	BATTLETANK_API class UClass* Z_Construct_UClass_UTankAimingComponent_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_UTankAimingComponent();
@@ -242,7 +243,8 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFiringStatus(EFiringSta
 			EnumNames.Emplace(TEXT("EFiringStatus::Locked"), 0);
 			EnumNames.Emplace(TEXT("EFiringStatus::Reloading"), 1);
 			EnumNames.Emplace(TEXT("EFiringStatus::Aiming"), 2);
-			EnumNames.Emplace(TEXT("EFiringStatus::EFiringStatus_MAX"), 3);
+			EnumNames.Emplace(TEXT("EFiringStatus::OutOfAmmo"), 3);
+			EnumNames.Emplace(TEXT("EFiringStatus::EFiringStatus_MAX"), 4);
 			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::EnumClass);
 			ReturnEnum->CppType = TEXT("EFiringStatus");
 #if WITH_METADATA
@@ -252,15 +254,16 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFiringStatus(EFiringSta
 		}
 		return ReturnEnum;
 	}
-	uint32 Get_Z_Construct_UEnum_BattleTank_EFiringStatus_CRC() { return 1223483445U; }
+	uint32 Get_Z_Construct_UEnum_BattleTank_EFiringStatus_CRC() { return 3992222416U; }
 	void UTankAimingComponent::StaticRegisterNativesUTankAimingComponent()
 	{
 		UClass* Class = UTankAimingComponent::StaticClass();
 		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
 			{ "Fire", (Native)&UTankAimingComponent::execFire },
+			{ "GetRoundsLeft", (Native)&UTankAimingComponent::execGetRoundsLeft },
 			{ "Initialise", (Native)&UTankAimingComponent::execInitialise },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 2);
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 3);
 	}
 	UFunction* Z_Construct_UFunction_UTankAimingComponent_Fire()
 	{
@@ -269,6 +272,28 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFiringStatus(EFiringSta
 		if (!ReturnFunction)
 		{
 			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("Fire"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Firing"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/TankAimingComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft()
+	{
+		struct TankAimingComponent_eventGetRoundsLeft_Parms
+		{
+			int32 ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_UTankAimingComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetRoundsLeft"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x54080401, 65535, sizeof(TankAimingComponent_eventGetRoundsLeft_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UUnsizedIntProperty(CPP_PROPERTY_BASE(ReturnValue, TankAimingComponent_eventGetRoundsLeft_Parms), 0x0010000000000580);
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -323,6 +348,7 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFiringStatus(EFiringSta
 				OuterClass->ClassFlags |= 0x20B00080;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_UTankAimingComponent_Fire());
+				OuterClass->LinkChild(Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft());
 				OuterClass->LinkChild(Z_Construct_UFunction_UTankAimingComponent_Initialise());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -333,6 +359,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_PorjectileBP = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PorjectileBP"), RF_Public|RF_Transient|RF_MarkAsNative) UClassProperty(CPP_PROPERTY_BASE(PorjectileBP, UTankAimingComponent), 0x0014000000000001, Z_Construct_UClass_AProjectile_NoRegister(), UClass::StaticClass());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UTankAimingComponent_Fire(), "Fire"); // 3453538568
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UTankAimingComponent_GetRoundsLeft(), "GetRoundsLeft"); // 1051426849
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UTankAimingComponent_Initialise(), "Initialise"); // 1148981797
 				static TCppClassTypeInfo<TCppClassTypeTraits<UTankAimingComponent> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
@@ -358,7 +385,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankAimingComponent, 619178665);
+	IMPLEMENT_CLASS(UTankAimingComponent, 614319067);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTankAimingComponent(Z_Construct_UClass_UTankAimingComponent, &UTankAimingComponent::StaticClass, TEXT("/Script/BattleTank"), TEXT("UTankAimingComponent"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTankAimingComponent);
 	void UTankBarrel::StaticRegisterNativesUTankBarrel()
@@ -811,8 +838,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BattleTank")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x9DED491E;
-			Guid.B = 0x202BE39C;
+			Guid.A = 0x8AB4AB56;
+			Guid.B = 0xCDFD46DE;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

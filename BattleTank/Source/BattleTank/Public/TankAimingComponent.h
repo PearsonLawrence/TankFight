@@ -16,7 +16,7 @@ enum class EFiringStatus : uint8
 	Locked,
 	Reloading,
 	Aiming,
-	
+	OutOfAmmo,
 };
 
 class UTankBarrel;
@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Setup")
 		TSubclassOf<AProjectile> PorjectileBP;
 
-
+	
 
 	UPROPERTY(EditAnywhere, Category = "Firing")
 		float ReloadTimeInSeconds = 3;
@@ -52,17 +52,20 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Firing")
 		void Fire();
 
-	EFiringStatus GetFiringState() const;
+	    EFiringStatus GetFiringState() const;
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 		EFiringStatus FiringState = EFiringStatus::Reloading;
 
+	UFUNCTION(BlueprintCallable, Category = "Firing")
+		int GetRoundsLeft() const;
 
 private:
 	
 	UPROPERTY(EditAnywhere, Category = "Firing")
 		float LaunchSpeed = 4000000; // sensible starting value
 
+	
 	virtual void BeginPlay() override;
 
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
@@ -78,6 +81,7 @@ private:
 	// Sets default values for this pawn's properties
 	FVector AimDirection;
 
+	int RoundsLeft = 3;
 
 	double LastFireTime = 0;
 

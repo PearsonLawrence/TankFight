@@ -17,6 +17,14 @@ class UTankTurret;
 
 #define BattleTank_Source_BattleTank_Public_TankAimingComponent_h_29_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetRoundsLeft) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=this->GetRoundsLeft(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execFire) \
 	{ \
 		P_FINISH; \
@@ -37,6 +45,14 @@ class UTankTurret;
 
 
 #define BattleTank_Source_BattleTank_Public_TankAimingComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetRoundsLeft) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=this->GetRoundsLeft(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execFire) \
 	{ \
@@ -136,5 +152,6 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define FOREACH_ENUM_EFIRINGSTATUS(op) \
 	op(EFiringStatus::Locked) \
 	op(EFiringStatus::Reloading) \
-	op(EFiringStatus::Aiming) 
+	op(EFiringStatus::Aiming) \
+	op(EFiringStatus::OutOfAmmo) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
