@@ -19,10 +19,12 @@ public:
 	   void BeginPlay() override;
 	   virtual void Tick(float DeltaTime) override;
 
+protected:
+	UPROPERTY(EditAnywhere, Category = "Setup") // consider EditDefaultsOnly
+		float AcceptanceRadius = 8000;
 
 private:
 
-	UPROPERTY(Editdefaultsonly)
-	float AcceptanceRadius = 3000;
+
 	
 };

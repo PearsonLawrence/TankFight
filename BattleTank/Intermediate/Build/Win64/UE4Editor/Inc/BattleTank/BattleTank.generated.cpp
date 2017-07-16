@@ -196,7 +196,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-				UProperty* NewProp_AcceptanceRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("AcceptanceRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(AcceptanceRadius, ATankAIController1), 0x0040000000010001);
+				UProperty* NewProp_AcceptanceRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("AcceptanceRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(AcceptanceRadius, ATankAIController1), 0x0020080000000001);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				static TCppClassTypeInfo<TCppClassTypeTraits<ATankAIController1> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
@@ -206,15 +206,16 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Collision Rendering Utilities|Transformation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TankAIController1.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Public/TankAIController1.h"));
-				MetaData->SetValue(NewProp_AcceptanceRadius, TEXT("Category"), TEXT("TankAIController1"));
+				MetaData->SetValue(NewProp_AcceptanceRadius, TEXT("Category"), TEXT("Setup"));
 				MetaData->SetValue(NewProp_AcceptanceRadius, TEXT("ModuleRelativePath"), TEXT("Public/TankAIController1.h"));
+				MetaData->SetValue(NewProp_AcceptanceRadius, TEXT("ToolTip"), TEXT("consider EditDefaultsOnly"));
 #endif
 			}
 		}
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATankAIController1, 38753223);
+	IMPLEMENT_CLASS(ATankAIController1, 4067625870);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATankAIController1(Z_Construct_UClass_ATankAIController1, &ATankAIController1::StaticClass, TEXT("/Script/BattleTank"), TEXT("ATankAIController1"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATankAIController1);
 static UEnum* EFiringStatus_StaticEnum()
@@ -810,7 +811,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BattleTank")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x0AF88DF9;
+			Guid.A = 0x9DED491E;
 			Guid.B = 0x202BE39C;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
