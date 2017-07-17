@@ -22,6 +22,8 @@ AProjectile::AProjectile()
 	ImpactBlast = CreateDefaultSubobject<UParticleSystemComponent>(FName("Impact Blast"));
 	ImpactBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	ImpactBlast->bAutoActivate = false;
+
+	ExplosionForce = CreateDefaultSubobject<URadialForceComponent>(FName("Explosion Force"));
 }
 
 // Called when the game starts or when spawned
@@ -33,11 +35,14 @@ void AProjectile::BeginPlay()
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* otherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	CollisionMesh->Deactivate();
-	CollisionMesh->SetVisibility(false);
+	UE_LOG(LogTemp, Error, TEXT("%s hit"), *GetName())
+		SetRootComponent(ImpactBlast);
+	CollisionMesh->DestroyComponent();
 	PS->Deactivate();
 	ImpactBlast->Activate();
-	ProjectileMovement->Deactivate();
+	ExplosionForce->FireImpulse();
+
+	
 }
 
 void AProjectile::LaunchProjectile(float speed)

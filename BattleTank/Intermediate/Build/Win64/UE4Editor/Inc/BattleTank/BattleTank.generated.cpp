@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
+	ENGINE_API class UClass* Z_Construct_UClass_URadialForceComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_APawn();
@@ -164,6 +165,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 				OuterClass->LinkChild(Z_Construct_UFunction_AProjectile_OnHit());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_ExplosionForce = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ExplosionForce"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(ExplosionForce, AProjectile), 0x00200800000a0009, Z_Construct_UClass_URadialForceComponent_NoRegister());
 				UProperty* NewProp_ImpactBlast = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ImpactBlast"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(ImpactBlast, AProjectile), 0x00200800000a0009, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
 				UProperty* NewProp_PS = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PS"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(PS, AProjectile), 0x00200800000a0009, Z_Construct_UClass_UParticleSystemComponent_NoRegister());
 				UProperty* NewProp_CollisionMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CollisionMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(CollisionMesh, AProjectile), 0x00200800000a0009, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
@@ -176,6 +178,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Projectile.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Public/Projectile.h"));
+				MetaData->SetValue(NewProp_ExplosionForce, TEXT("Category"), TEXT("Components"));
+				MetaData->SetValue(NewProp_ExplosionForce, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_ExplosionForce, TEXT("ModuleRelativePath"), TEXT("Public/Projectile.h"));
 				MetaData->SetValue(NewProp_ImpactBlast, TEXT("Category"), TEXT("Components"));
 				MetaData->SetValue(NewProp_ImpactBlast, TEXT("EditInline"), TEXT("true"));
 				MetaData->SetValue(NewProp_ImpactBlast, TEXT("ModuleRelativePath"), TEXT("Public/Projectile.h"));
@@ -191,7 +196,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProjectile, 4036599264);
+	IMPLEMENT_CLASS(AProjectile, 447622893);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AProjectile(Z_Construct_UClass_AProjectile, &AProjectile::StaticClass, TEXT("/Script/BattleTank"), TEXT("AProjectile"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AProjectile);
 	void ATank::StaticRegisterNativesATank()
@@ -898,7 +903,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BattleTank")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x57F113A7;
+			Guid.A = 0xF0DD65A4;
 			Guid.B = 0xCC0B998C;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
