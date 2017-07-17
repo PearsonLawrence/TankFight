@@ -58,7 +58,7 @@ protected:
 		EFiringStatus FiringState = EFiringStatus::Reloading;
 
 	UFUNCTION(BlueprintCallable, Category = "Firing")
-		int GetRoundsLeft() const;
+		int32 GetRoundsLeft() const;
 
 private:
 	
@@ -81,7 +81,8 @@ private:
 	// Sets default values for this pawn's properties
 	FVector AimDirection;
 
-	int RoundsLeft = 3;
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+	int32 RoundsLeft = 3;
 
 	double LastFireTime = 0;
 

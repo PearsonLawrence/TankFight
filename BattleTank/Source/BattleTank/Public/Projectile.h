@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -12,20 +13,27 @@ class BATTLETANK_API AProjectile : public AActor
 {
 	GENERATED_BODY()
 	
-public:	
+private:	
 	// Sets default values for this actor's properties
-	AProjectile();
+
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* otherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UProjectileMovementComponent* ProjectileMovement;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UStaticMeshComponent* CollisionMesh = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UParticleSystemComponent* PS = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+    UParticleSystemComponent* ImpactBlast = nullptr;
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	AProjectile();
 	void LaunchProjectile(float speed);
 	
 };

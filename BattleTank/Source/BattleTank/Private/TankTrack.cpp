@@ -9,6 +9,7 @@ UTankTrack::UTankTrack()
 
 void UTankTrack::BeginPlay()
 {
+
 	OnComponentHit.AddDynamic(this, &UTankTrack::OnHit);
 }
 

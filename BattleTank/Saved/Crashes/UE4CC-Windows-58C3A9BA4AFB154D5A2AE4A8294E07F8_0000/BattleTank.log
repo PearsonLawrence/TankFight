@@ -1,0 +1,987 @@
+﻿Log file open, 07/16/17 15:10:06
+LogInit:Display: Running engine for game: BattleTank
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(312120728) SRandInit(312120728).
+LogTaskGraph: Started task graph with 5 named threads and 10 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.106893
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Build: ++UE4+Release-4.16-CL-3514769
+LogInit: Engine Version: 4.16.2-3514769+++UE4+Release-4.16
+LogInit: Compatible Engine Version: 4.16.0-3452394+++UE4+Release-4.16
+LogInit: Net CL: 3452394
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 9
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 17
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 23
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 15
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 3
+LogInit: Compiled (64-bit): Jun 29 2017 02:03:24
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.16
+LogInit: Command line:  
+LogInit: Base directory: D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2017.07.16-22.10.06:888][  0]LogInit: Selected Device Profile: [Windows]
+[2017.07.16-22.10.06:889][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2017.07.16-22.10.06:908][  0]LogInit: Computer: DESKTOP-8KPMQR7
+[2017.07.16-22.10.06:908][  0]LogInit: User: pears
+[2017.07.16-22.10.06:908][  0]LogInit: CPU Page size=4096, Cores=6
+[2017.07.16-22.10.06:908][  0]LogInit: High frequency timer resolution =3.515624 MHz
+[2017.07.16-22.10.06:909][  0]LogMemory: Memory total: Physical=63.9GB (64GB approx)
+[2017.07.16-22.10.06:909][  0]LogMemory: Platform Memory Stats for Windows
+[2017.07.16-22.10.06:909][  0]LogMemory: Process Physical Memory: 272.86 MB used, 272.86 MB peak
+[2017.07.16-22.10.06:909][  0]LogMemory: Process Virtual Memory: 267.12 MB used, 267.12 MB peak
+[2017.07.16-22.10.06:909][  0]LogMemory: Physical Memory: 6450.19 MB used,  58982.73 MB free, 65432.92 MB total
+[2017.07.16-22.10.06:909][  0]LogMemory: Virtual Memory: 633.75 MB used,  58982.73 MB free, 134217728.00 MB total
+[2017.07.16-22.10.06:971][  0]LogInit: Using OS detected language (en-US).
+[2017.07.16-22.10.06:971][  0]LogInit: Using OS detected locale (en-US).
+[2017.07.16-22.10.06:974][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2017.07.16-22.10.07:947][  0]LogD3D11RHI: D3D11 adapters:
+[2017.07.16-22.10.08:753][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1080' (Feature Level 11_0)
+[2017.07.16-22.10.08:753][  0]LogD3D11RHI:       7873/0/32716 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2017.07.16-22.10.08:756][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2017.07.16-22.10.08:756][  0]LogD3D11RHI:       0/0/32716 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2017.07.16-22.10.08:756][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2017.07.16-22.10.08:773][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2017.07.16-22.10.08:773][  0]LogD3D11RHI:     GPU DeviceId: 0x1b80 (for the marketing name, search the web for "GPU Device Id")
+[2017.07.16-22.10.08:773][  0]LogWindows: EnumDisplayDevices:
+[2017.07.16-22.10.08:773][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1080' (P:1 D:1)
+[2017.07.16-22.10.08:774][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1080' (P:0 D:1)
+[2017.07.16-22.10.08:774][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1080' (P:0 D:0)
+[2017.07.16-22.10.08:774][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1080' (P:0 D:0)
+[2017.07.16-22.10.08:774][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2017.07.16-22.10.08:775][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1080
+[2017.07.16-22.10.08:775][  0]LogD3D11RHI:   Driver Version: 384.76 (internal:22.21.13.8476, unified:384.76)
+[2017.07.16-22.10.08:775][  0]LogD3D11RHI:      Driver Date: 6-27-2017
+[2017.07.16-22.10.08:775][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2017.07.16-22.10.09:447][  0]LogD3D11RHI: Async texture creation enabled
+[2017.07.16-22.10.09:493][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2017.07.16-22.10.09:586][  0]LogShaderCompilers: Guid format shader working directory is -4 characters bigger than the processId version (C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Intermediate/Shaders/WorkingDirectory/16716/).
+[2017.07.16-22.10.09:586][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/pears/AppData/Local/Temp/UnrealShaderWorkingDir/A0F4BDFC4DA0A13F41FCCE8D0BE772B6/'.
+[2017.07.16-22.10.09:586][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2017.07.16-22.10.10:790][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2017.07.16-22.10.10:826][  0]LogTemp:Display: Loaded TP MacClientTargetPlatform
+[2017.07.16-22.10.10:862][  0]LogTemp:Display: Loaded TP MacNoEditorTargetPlatform
+[2017.07.16-22.10.10:899][  0]LogTemp:Display: Loaded TP MacServerTargetPlatform
+[2017.07.16-22.10.10:937][  0]LogTemp:Display: Loaded TP MacTargetPlatform
+[2017.07.16-22.10.10:974][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2017.07.16-22.10.11:012][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2017.07.16-22.10.11:049][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2017.07.16-22.10.11:080][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2017.07.16-22.10.11:116][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2017.07.16-22.10.11:162][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2017.07.16-22.10.11:208][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2017.07.16-22.10.11:244][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2017.07.16-22.10.11:280][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2017.07.16-22.10.11:317][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2017.07.16-22.10.11:405][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2017.07.16-22.10.11:405][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2017.07.16-22.10.11:433][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2017.07.16-22.10.11:506][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2017.07.16-22.10.11:528][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2017.07.16-22.10.11:565][  0]LogTemp:Display: Loaded TP LinuxClientTargetPlatform
+[2017.07.16-22.10.11:607][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2017.07.16-22.10.11:666][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2017.07.16-22.10.11:713][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2017.07.16-22.10.11:713][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2017.07.16-22.10.12:128][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache: Loaded boot cache 0.10s 90MB C:/Users/pears/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/pears/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2017.07.16-22.10.12:226][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2017.07.16-22.10.12:241][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2017.07.16-22.10.12:253][  0]LogDerivedDataCache: Using Local data cache path C:/Users/pears/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2017.07.16-22.10.12:262][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2017.07.16-22.10.12:262][  0]LogSlate: Using Freetype 2.6.0
+[2017.07.16-22.10.12:263][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.07.16-22.10.12:263][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2017.07.16-22.10.12:564][  0]LogInit: Selected Device Profile: [Windows]
+[2017.07.16-22.10.12:646][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2017.07.16-22.10.12:785][  0]LogMeshUtilities: Using QuadricMeshReduction for automatic static mesh reduction
+[2017.07.16-22.10.12:818][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2017.07.16-22.10.12:858][  0]LogMeshUtilities: Using SimplygonSwarm for distributed automatic mesh merging
+[2017.07.16-22.10.12:859][  0]LogMeshUtilities: No automatic skeletal mesh reduction module available
+[2017.07.16-22.10.12:859][  0]LogMeshUtilities: No automatic mesh merging module available
+[2017.07.16-22.10.13:367][  0]LogNetVersion: BattleTank , NetCL: 3452394, EngineNetVer: 2, GameNetVer: 0 (Checksum: 4114001466)
+[2017.07.16-22.10.13:423][  0]LogAssetRegistry: FAssetRegistry took 0.0252 seconds to start up
+[2017.07.16-22.10.13:475][  0]LogPackageLocalizationCache: Processed 4 localized package path(s) for 2 prioritized culture(s) in 0.036625 seconds
+[2017.07.16-22.10.13:479][  0]LogUObjectArray: 34194 objects as part of root set at end of initial load.
+[2017.07.16-22.10.13:479][  0]LogUObjectAllocator: 7260416 out of 0 bytes used by permanent object pool.
+[2017.07.16-22.10.13:479][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2017.07.16-22.10.13:521][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2017.07.16-22.10.15:668][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2017.07.16-22.10.15:704][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2017.07.16-22.10.16:222][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2017.07.16-22.10.16:555][  0]SourceControl: Info Source control is disabled
+[2017.07.16-22.10.16:653][  0]SourceControl: Info Source control is disabled
+[2017.07.16-22.10.16:699][  0]SourceControl: Info Source control is disabled
+[2017.07.16-22.10.16:739][  0]SourceControl: Info Source control is disabled
+[2017.07.16-22.10.17:336][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2017.07.16-22.10.17:907][  0]LogEngine: Initializing Engine...
+[2017.07.16-22.10.17:908][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2017.07.16-22.10.18:135][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2017.07.16-22.10.18:135][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2017.07.16-22.10.18:230][  0]LogAIModule: Creating AISystem for world Untitled
+[2017.07.16-22.10.18:242][  0]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.10.18:266][  0]LogInit: FAudioDevice initialized.
+[2017.07.16-22.10.18:311][  0]LogDerivedDataCache: Saved boot cache 0.04s 90MB C:/Users/pears/AppData/Local/UnrealEngine/4.16/DerivedDataCache/Boot.ddc.
+[2017.07.16-22.10.18:318][  0]LogInit: Texture streaming: Enabled
+[2017.07.16-22.10.18:390][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2017.07.16-22.10.18:562][  0]LogInit: Transaction tracking system initialized
+[2017.07.16-22.10.18:783][  0]BlueprintLog: New page: Editor Load
+[2017.07.16-22.10.19:451][  0]LocalizationService: Info Localization service is disabled
+[2017.07.16-22.10.19:963][  0]LogConsoleResponse:Display: 
+[2017.07.16-22.10.20:095][  0]LogCook:Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2017.07.16-22.10.20:095][  0]LogCook:Display: Mobile HDR setting 1
+[2017.07.16-22.10.20:971][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/' took 0.01s
+[2017.07.16-22.10.21:018][  0]SourceControl: Info Source control is disabled
+[2017.07.16-22.10.21:018][  0]Cmd: MAP LOAD FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2017.07.16-22.10.21:018][  0]LightingResults: New page: Lighting Build
+[2017.07.16-22.10.21:083][  0]MapCheck: New page: Map Check
+[2017.07.16-22.10.21:083][  0]LightingResults: New page: Lighting Build
+[2017.07.16-22.10.21:489][  0]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.10.21:515][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.07.16-22.10.21:532][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.07.16-22.10.21:590][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 57.469ms to complete.
+[2017.07.16-22.10.21:590][  0]LogFileHelpers: Loading map 'Battlefield' took 0.572
+[2017.07.16-22.10.21:799][  0]LogCollectionManager: Loaded 0 collections in 0.001156 seconds
+[2017.07.16-22.10.21:878][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Collections/' took 0.01s
+[2017.07.16-22.10.21:878][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Developers/pears/Collections/' took 0.01s
+[2017.07.16-22.10.21:878][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Collections/' took 0.01s
+[2017.07.16-22.10.21:878][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2017.07.16-22.10.21:888][  0]LogContentBrowser: Native class hierarchy populated in 0.0102 seconds. Added 2341 classes and 496 folders.
+[2017.07.16-22.10.21:936][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0029 seconds. Added 0 classes and 0 folders.
+[2017.07.16-22.10.21:981][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0028 seconds. Added 0 classes and 0 folders.
+[2017.07.16-22.10.22:010][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2017.07.16-22.10.22:018][  0]LogSlate: Took 0.000217 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.07.16-22.10.22:021][  0]LogSlate: Took 0.000208 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2017.07.16-22.10.22:023][  0]LogSlate: Took 0.000185 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2017.07.16-22.10.22:025][  0]LogSlate: Took 0.000158 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2017.07.16-22.10.22:112][  0]LogRenderer: Reallocating scene render targets to support 1640x992 NumSamples 1 (Frame:1).
+[2017.07.16-22.10.22:268][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2017.07.16-22.10.22:324][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0029 seconds. Added 1 classes and 2 folders.
+[2017.07.16-22.10.22:325][  0]LogLoad: (Engine Initialization) Total time: 17.52 seconds
+[2017.07.16-22.10.22:325][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.10 seconds
+[2017.07.16-22.10.22:325][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2017.07.16-22.10.22:325][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2017.07.16-22.10.22:337][  0]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2017.07.16-22.10.22:377][  0]LogEditorViewport: Clicking on Component (LMB): StaticMeshComponent (Sky Sphere mesh)
+[2017.07.16-22.10.22:395][  0]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2017.07.16-22.10.22:395][  0]LogOcInput: OculusInput pre-init called
+[2017.07.16-22.10.22:396][  0]LogHMD: Starting GearVRController plugin
+[2017.07.16-22.10.22:412][  0]LogAssetRegistry: Asset discovery search completed in 9.0107 seconds
+[2017.07.16-22.10.22:413][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2017.07.16-22.10.22:413][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000135 seconds (updated 0 objects)
+[2017.07.16-22.10.22:414][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2017.07.16-22.10.23:358][ 95]LogSlate: Took 0.000244 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.07.16-22.10.31:332][179]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.10.31:378][179]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.10.31:378][179]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.10.31:379][179]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:10:31 AM)
+[2017.07.16-22.10.31:379][179]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.10.31:468][179]LogPlayLevel: PIE: StaticDuplicateObject took: (0.088851s)
+[2017.07.16-22.10.31:469][179]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.10.31:469][179]LogPlayLevel: PIE: World Init took: (0.000835s)
+[2017.07.16-22.10.31:469][179]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.090160s)
+[2017.07.16-22.10.31:489][179]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.10.31:502][179]LogInit: FAudioDevice initialized.
+[2017.07.16-22.10.31:566][179]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.10.31:578][179]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.10.31
+[2017.07.16-22.10.31:579][179]LogWorld: Bringing up level for play took: 0.008766
+[2017.07.16-22.10.31:629][179]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0031 seconds. Added 11 classes and 0 folders.
+[2017.07.16-22.10.31:631][179]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.286
+[2017.07.16-22.10.31:631][179]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.07:534][481]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.07:577][481]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.26:842][169]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2017.07.16-22.11.28:685][387]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2017.07.16-22.11.30:011][543]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2017.07.16-22.11.30:955][653]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2017.07.16-22.11.31:997][775]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2017.07.16-22.11.33:635][965]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.11.33:644][965]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.33:644][965]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.11.33:644][965]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:11:33 AM)
+[2017.07.16-22.11.33:645][965]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.11.33:720][965]LogPlayLevel: PIE: StaticDuplicateObject took: (0.075095s)
+[2017.07.16-22.11.33:720][965]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.11.33:720][965]LogPlayLevel: PIE: World Init took: (0.000635s)
+[2017.07.16-22.11.33:721][965]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.076141s)
+[2017.07.16-22.11.33:738][965]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.11.33:749][965]LogInit: FAudioDevice initialized.
+[2017.07.16-22.11.33:781][965]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.11.33:787][965]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.11.33
+[2017.07.16-22.11.33:787][965]LogWorld: Bringing up level for play took: 0.004367
+[2017.07.16-22.11.33:789][965]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.128
+[2017.07.16-22.11.33:789][965]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.48:789][761]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.48:832][761]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.50:013][894]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.11.50:022][894]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.50:022][894]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.11.50:022][894]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:11:50 AM)
+[2017.07.16-22.11.50:022][894]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.11.50:094][894]LogPlayLevel: PIE: StaticDuplicateObject took: (0.071929s)
+[2017.07.16-22.11.50:095][894]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.11.50:095][894]LogPlayLevel: PIE: World Init took: (0.000652s)
+[2017.07.16-22.11.50:095][894]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.072990s)
+[2017.07.16-22.11.50:120][894]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.11.50:131][894]LogInit: FAudioDevice initialized.
+[2017.07.16-22.11.50:189][894]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.11.50:195][894]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.11.50
+[2017.07.16-22.11.50:195][894]LogWorld: Bringing up level for play took: 0.004308
+[2017.07.16-22.11.50:197][894]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.28
+[2017.07.16-22.11.50:197][894]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.58:940][938]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.11.58:982][938]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.00:024][ 51]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.12.00:033][ 51]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.00:033][ 51]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.12.00:033][ 51]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:12:00 AM)
+[2017.07.16-22.12.00:033][ 51]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.12.00:106][ 51]LogPlayLevel: PIE: StaticDuplicateObject took: (0.072563s)
+[2017.07.16-22.12.00:107][ 51]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.12.00:107][ 51]LogPlayLevel: PIE: World Init took: (0.000669s)
+[2017.07.16-22.12.00:107][ 51]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.073654s)
+[2017.07.16-22.12.00:127][ 51]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.12.00:143][ 51]LogInit: FAudioDevice initialized.
+[2017.07.16-22.12.00:194][ 51]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.12.00:200][ 51]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.12.00
+[2017.07.16-22.12.00:200][ 51]LogWorld: Bringing up level for play took: 0.004384
+[2017.07.16-22.12.00:202][ 51]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.285
+[2017.07.16-22.12.00:202][ 51]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.22:578][731]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.22:618][731]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.25:543][ 69]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.12.25:553][ 69]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.12.25:553][ 69]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.12.25:554][ 69]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:12:25 AM)
+[2017.07.16-22.12.25:554][ 69]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.12.25:632][ 69]LogPlayLevel: PIE: StaticDuplicateObject took: (0.077795s)
+[2017.07.16-22.12.25:632][ 69]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.12.25:632][ 69]LogPlayLevel: PIE: World Init took: (0.000635s)
+[2017.07.16-22.12.25:633][ 69]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.078924s)
+[2017.07.16-22.12.25:658][ 69]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.12.25:670][ 69]LogInit: FAudioDevice initialized.
+[2017.07.16-22.12.25:703][ 69]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.12.25:709][ 69]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.12.25
+[2017.07.16-22.12.25:709][ 69]LogWorld: Bringing up level for play took: 0.004445
+[2017.07.16-22.12.25:711][ 69]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.206
+[2017.07.16-22.12.25:711][ 69]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.13.41:880][205]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.13.41:931][205]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.14.02:671][891]LogSlate: Took 0.000559 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2017.07.16-22.14.48:496][718]LogSlate: Took 0.000383 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.07.16-22.14.48:534][718]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 C:\Users\pears\Desktop\mortar_barrel.fbx)
+[2017.07.16-22.14.48:655][718]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2017.07.16-22.14.48:656][718]LogFbx: ItemName: Geometry, ItemCount : 1
+[2017.07.16-22.14.48:656][718]LogFbx: ItemName: Model, ItemCount : 1
+[2017.07.16-22.14.48:675][718]LogFbx: Loading FBX Scene from C:\Users\pears\Desktop\mortar_barrel.fbx
+[2017.07.16-22.14.48:704][718]LogFbx: FBX Scene Loaded Succesfully
+[2017.07.16-22.14.52:879][718]LogFbx: Loading FBX Scene from C:\Users\pears\Desktop\mortar_barrel.fbx
+[2017.07.16-22.14.52:883][718]LogFbx: FBX Scene Loaded Succesfully
+[2017.07.16-22.14.52:887][718]LogFbx:Warning: Triangulating static mesh Cylinder
+[2017.07.16-22.14.52:903][718]LogStaticMesh: Building static mesh mortar_barrel...
+[2017.07.16-22.14.52:919][718]LogStaticMesh: Built static mesh [0.02s] /Game/Mortar/mortar_barrel.mortar_barrel
+[2017.07.16-22.14.52:926][718]LogStaticMesh:Warning: mortar_barrel has degenerate tangent bases which will result in incorrect shading.  MikkTSpace relies on tangent bases and may result in mesh corruption, consider disabling this option.
+[2017.07.16-22.14.52:938][718]FBXImport:Warning: Warning No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2017.07.16-22.14.52:938][718]FBXImport:Warning: Warning mortar_barrel has degenerate tangent bases which will result in incorrect shading.  MikkTSpace relies on tangent bases and may result in mesh corruption, consider disabling this option. 
+[2017.07.16-22.14.52:972][718]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 C:\Users\pears\Desktop\mortar_body.fbx)
+[2017.07.16-22.14.53:001][718]LogFbx: Loading FBX Scene from C:\Users\pears\Desktop\mortar_body.fbx
+[2017.07.16-22.14.53:005][718]LogFbx: FBX Scene Loaded Succesfully
+[2017.07.16-22.14.53:007][718]LogFbx:Warning: Triangulating static mesh Body
+[2017.07.16-22.14.53:016][718]LogStaticMesh: Building static mesh mortar_body...
+[2017.07.16-22.14.53:017][718]LogStaticMesh: Built static mesh [0.00s] /Game/Mortar/mortar_body.mortar_body
+[2017.07.16-22.14.53:023][718]FBXImport:Warning: Warning No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2017.07.16-22.14.53:029][718]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 C:\Users\pears\Desktop\mortar_dome.fbx)
+[2017.07.16-22.14.53:039][718]LogFbx: Loading FBX Scene from C:\Users\pears\Desktop\mortar_dome.fbx
+[2017.07.16-22.14.53:045][718]LogFbx: FBX Scene Loaded Succesfully
+[2017.07.16-22.14.53:046][718]LogFbx:Warning: Triangulating static mesh Sphere
+[2017.07.16-22.14.53:102][718]LogStaticMesh: Building static mesh mortar_dome...
+[2017.07.16-22.14.53:105][718]LogStaticMesh: Built static mesh [0.00s] /Game/Mortar/mortar_dome.mortar_dome
+[2017.07.16-22.14.53:114][718]FBXImport:Warning: Warning No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2017.07.16-22.15.55:467][297]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0032 seconds. Added 112 classes and 0 folders.
+[2017.07.16-22.15.55:929][297]LogSlate: Took 0.000205 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.07.16-22.16.31:657][535]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Mortar/mortar_body" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_body.uasset" SILENT=true
+[2017.07.16-22.16.31:668][535]LogSavePackage: Save=9.66ms
+[2017.07.16-22.16.31:668][535]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/mortar_body0DAC81F24649D85BA86C4E80FF71DC26.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_body.uasset'
+[2017.07.16-22.16.31:672][535]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_body.uasset
+[2017.07.16-22.17.05:886][616]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Mortar/mortar_dome" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_dome.uasset" SILENT=true
+[2017.07.16-22.17.05:897][616]LogSavePackage: Save=9.32ms
+[2017.07.16-22.17.05:897][616]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/mortar_dome4D4EBD554435B637FB66C28FAD4F8A2B.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_dome.uasset'
+[2017.07.16-22.17.05:902][616]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_dome.uasset
+[2017.07.16-22.19.46:027][227]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.19.46:853][289]LogSlate: Took 0.000251 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2017.07.16-22.20.54:635][640]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.21.01:839][268]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.07.16-22.21.08:528][869]LogBlueprint:Warning: Reparenting blueprint Blueprint /Game/Mortar/MortarPawn_BP.MortarPawn_BP from Pawn to TankPawn...
+[2017.07.16-22.21.08:535][869]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.21.19:990][911]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.07.16-22.21.28:093][689]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.21.36:451][622]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.21.36:465][622]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.21.36:465][622]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.21.36:465][622]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:21:36 AM)
+[2017.07.16-22.21.36:466][622]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.21.36:544][622]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078079s)
+[2017.07.16-22.21.36:544][622]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.21.36:545][622]LogPlayLevel: PIE: World Init took: (0.000798s)
+[2017.07.16-22.21.36:545][622]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.079317s)
+[2017.07.16-22.21.36:574][622]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.21.36:586][622]LogInit: FAudioDevice initialized.
+[2017.07.16-22.21.36:617][622]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.21.36:623][622]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.21.36
+[2017.07.16-22.21.36:624][622]LogWorld: Bringing up level for play took: 0.004762
+[2017.07.16-22.21.36:626][622]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.709
+[2017.07.16-22.21.36:626][622]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.21.56:377][936]LogEditorViewport: Clicking on Actor (LMB): MortarPawn_BP_C (MortarPawn_BP)
+[2017.07.16-22.22.04:789][886]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.04:848][886]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.17:025][237]LogEditorViewport: Clicking on Actor (LMB): Tank_BP_C (Tank_BP)
+[2017.07.16-22.22.18:085][353]Cmd: DELETE
+[2017.07.16-22.22.18:085][353]Cmd: ACTOR DELETE
+[2017.07.16-22.22.18:085][353]LogEditorActor: Deleted Actor: Tank_BP_C
+[2017.07.16-22.22.18:149][353]LogEditorActor: Deleted 1 Actors (0.064 secs)
+[2017.07.16-22.22.19:094][462]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.22.19:104][462]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.19:105][462]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.22.19:105][462]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:22:19 AM)
+[2017.07.16-22.22.19:105][462]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.22.19:179][462]LogPlayLevel: PIE: StaticDuplicateObject took: (0.074316s)
+[2017.07.16-22.22.19:180][462]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.22.19:180][462]LogPlayLevel: PIE: World Init took: (0.000672s)
+[2017.07.16-22.22.19:180][462]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.075424s)
+[2017.07.16-22.22.19:216][462]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.22.19:227][462]LogInit: FAudioDevice initialized.
+[2017.07.16-22.22.19:258][462]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.22.19:263][462]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.22.19
+[2017.07.16-22.22.19:264][462]LogWorld: Bringing up level for play took: 0.004437
+[2017.07.16-22.22.19:266][462]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.651
+[2017.07.16-22.22.19:266][462]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.27:916][498]LogProjectileMovement:Warning: Projectile_BP_C_0 is outside the world bounds!
+[2017.07.16-22.22.31:782][962]LogProjectileMovement:Warning: Projectile_BP_C_1 is outside the world bounds!
+[2017.07.16-22.22.34:816][326]LogProjectileMovement:Warning: Projectile_BP_C_2 is outside the world bounds!
+[2017.07.16-22.22.38:938][820]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.38:980][820]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.53:791][542]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.22.56:022][791]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.22.56:033][791]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.22.56:033][791]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.22.56:033][791]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:22:56 AM)
+[2017.07.16-22.22.56:033][791]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.22.56:108][791]LogPlayLevel: PIE: StaticDuplicateObject took: (0.075008s)
+[2017.07.16-22.22.56:109][791]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.22.56:109][791]LogPlayLevel: PIE: World Init took: (0.000678s)
+[2017.07.16-22.22.56:109][791]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.076136s)
+[2017.07.16-22.22.56:145][791]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.22.56:156][791]LogInit: FAudioDevice initialized.
+[2017.07.16-22.22.56:185][791]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.22.56:190][791]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.22.56
+[2017.07.16-22.22.56:191][791]LogWorld: Bringing up level for play took: 0.004419
+[2017.07.16-22.22.56:193][791]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.276
+[2017.07.16-22.22.56:193][791]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.09:417][376]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.09:459][376]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.22:758][634]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.23.24:024][759]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2017.07.16-22.23.24:771][839]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.23.24:782][839]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.24:782][839]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.23.24:783][839]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:23:24 AM)
+[2017.07.16-22.23.24:783][839]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.23.24:854][839]LogPlayLevel: PIE: StaticDuplicateObject took: (0.071276s)
+[2017.07.16-22.23.24:855][839]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.23.24:855][839]LogPlayLevel: PIE: World Init took: (0.000714s)
+[2017.07.16-22.23.24:855][839]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.072426s)
+[2017.07.16-22.23.24:909][839]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.23.24:922][839]LogInit: FAudioDevice initialized.
+[2017.07.16-22.23.24:949][839]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.23.24:955][839]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.23.24
+[2017.07.16-22.23.24:955][839]LogWorld: Bringing up level for play took: 0.004361
+[2017.07.16-22.23.24:957][839]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 1.04
+[2017.07.16-22.23.24:957][839]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.34:726][711]LogEditorViewport: Clicking on Actor (LMB): Tank_BP_C (Tank_BP)
+[2017.07.16-22.23.47:779][511]LogEditorViewport: Clicking on Actor (LMB): MortarPawn_BP_C (MortarPawn_BP)
+[2017.07.16-22.23.53:253][930]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.23.53:296][930]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.00:651][626]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.24.02:434][804]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.24.02:443][804]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.02:443][804]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.24.02:444][804]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:24:02 AM)
+[2017.07.16-22.24.02:444][804]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.24.02:517][804]LogPlayLevel: PIE: StaticDuplicateObject took: (0.072880s)
+[2017.07.16-22.24.02:517][804]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.24.02:518][804]LogPlayLevel: PIE: World Init took: (0.000704s)
+[2017.07.16-22.24.02:518][804]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.074070s)
+[2017.07.16-22.24.02:555][804]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.24.02:579][804]LogInit: FAudioDevice initialized.
+[2017.07.16-22.24.02:610][804]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.24.02:616][804]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.24.02
+[2017.07.16-22.24.02:616][804]LogWorld: Bringing up level for play took: 0.004626
+[2017.07.16-22.24.02:618][804]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.701
+[2017.07.16-22.24.02:618][804]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.08:678][205]LogEditorViewport: Clicking on Actor (LMB): Tank_BP_C (Tank_BP)
+[2017.07.16-22.24.21:994][951]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.22:069][951]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.46:883][814]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.24.46:892][814]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.46:892][814]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.24.46:893][814]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:24:46 AM)
+[2017.07.16-22.24.46:893][814]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.24.46:968][814]LogPlayLevel: PIE: StaticDuplicateObject took: (0.075294s)
+[2017.07.16-22.24.46:969][814]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.24.46:969][814]LogPlayLevel: PIE: World Init took: (0.000692s)
+[2017.07.16-22.24.46:969][814]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.076433s)
+[2017.07.16-22.24.46:999][814]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.24.47:010][814]LogInit: FAudioDevice initialized.
+[2017.07.16-22.24.47:045][814]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.24.47:051][814]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.24.47
+[2017.07.16-22.24.47:051][814]LogWorld: Bringing up level for play took: 0.004502
+[2017.07.16-22.24.47:053][814]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 1.136
+[2017.07.16-22.24.47:053][814]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.24.59:307][740]LogEditorViewport: Clicking on Actor (LMB): MortarPawn_BP_C (MortarPawn_BP)
+[2017.07.16-22.25.01:467][952]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.25.01:506][952]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.25.20:210][613]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.26.00:387][579]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.26.13:343][ 57]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.26.13:352][ 57]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.26.13:352][ 57]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.26.13:352][ 57]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:26:13 AM)
+[2017.07.16-22.26.13:352][ 57]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.26.13:427][ 57]LogPlayLevel: PIE: StaticDuplicateObject took: (0.074948s)
+[2017.07.16-22.26.13:428][ 57]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.26.13:428][ 57]LogPlayLevel: PIE: World Init took: (0.000735s)
+[2017.07.16-22.26.13:429][ 57]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.076174s)
+[2017.07.16-22.26.13:453][ 57]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.26.13:465][ 57]LogInit: FAudioDevice initialized.
+[2017.07.16-22.26.13:499][ 57]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.26.13:504][ 57]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.26.13
+[2017.07.16-22.26.13:505][ 57]LogWorld: Bringing up level for play took: 0.004472
+[2017.07.16-22.26.13:507][ 57]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.41
+[2017.07.16-22.26.13:507][ 57]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.26.24:682][395]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.26.24:735][395]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.27.00:095][306]BlueprintLog: New page: Compile Tank_BP
+[2017.07.16-22.27.03:480][633]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.27.03:491][633]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.27.03:492][633]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.27.03:492][633]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:27:03 AM)
+[2017.07.16-22.27.03:492][633]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.27.03:565][633]LogPlayLevel: PIE: StaticDuplicateObject took: (0.072071s)
+[2017.07.16-22.27.03:565][633]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.27.03:566][633]LogPlayLevel: PIE: World Init took: (0.000713s)
+[2017.07.16-22.27.03:566][633]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.073229s)
+[2017.07.16-22.27.03:602][633]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.27.03:613][633]LogInit: FAudioDevice initialized.
+[2017.07.16-22.27.03:645][633]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.27.03:650][633]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.27.03
+[2017.07.16-22.27.03:651][633]LogWorld: Bringing up level for play took: 0.004196
+[2017.07.16-22.27.03:653][633]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.264
+[2017.07.16-22.27.03:653][633]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.27.11:523][575]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.27.11:566][575]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.16:840][843]BlueprintLog: New page: Compile Tank_BP
+[2017.07.16-22.28.41:516][877]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.28.41:528][877]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.41:528][877]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.28.41:528][877]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:28:41 AM)
+[2017.07.16-22.28.41:528][877]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.28.41:607][877]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078817s)
+[2017.07.16-22.28.41:608][877]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.28.41:608][877]LogPlayLevel: PIE: World Init took: (0.000688s)
+[2017.07.16-22.28.41:608][877]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.079958s)
+[2017.07.16-22.28.41:643][877]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.28.41:657][877]LogInit: FAudioDevice initialized.
+[2017.07.16-22.28.41:692][877]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.28.41:698][877]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.28.41
+[2017.07.16-22.28.41:699][877]LogWorld: Bringing up level for play took: 0.004470
+[2017.07.16-22.28.41:701][877]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.216
+[2017.07.16-22.28.41:701][877]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.42:881][990]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.42:927][990]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.44:826][178]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.28.44:837][178]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.44:837][178]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.28.44:837][178]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:28:44 AM)
+[2017.07.16-22.28.44:837][178]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.28.44:908][178]LogPlayLevel: PIE: StaticDuplicateObject took: (0.070493s)
+[2017.07.16-22.28.44:908][178]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.28.44:909][178]LogPlayLevel: PIE: World Init took: (0.000680s)
+[2017.07.16-22.28.44:909][178]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.071605s)
+[2017.07.16-22.28.44:946][178]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.28.44:958][178]LogInit: FAudioDevice initialized.
+[2017.07.16-22.28.44:992][178]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.28.44:997][178]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.28.44
+[2017.07.16-22.28.44:997][178]LogWorld: Bringing up level for play took: 0.004196
+[2017.07.16-22.28.44:999][178]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 1.082
+[2017.07.16-22.28.44:999][178]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.58:082][745]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.28.58:125][745]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.30.24:747][796]BlueprintLog: New page: Compile Tank_BP
+[2017.07.16-22.30.26:980][  2]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.30.26:991][  2]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.30.26:992][  2]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.30.26:992][  2]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:30:26 AM)
+[2017.07.16-22.30.26:992][  2]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.30.27:066][  2]LogPlayLevel: PIE: StaticDuplicateObject took: (0.074586s)
+[2017.07.16-22.30.27:067][  2]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.30.27:067][  2]LogPlayLevel: PIE: World Init took: (0.000689s)
+[2017.07.16-22.30.27:068][  2]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.075715s)
+[2017.07.16-22.30.27:100][  2]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.30.27:113][  2]LogInit: FAudioDevice initialized.
+[2017.07.16-22.30.27:143][  2]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.30.27:148][  2]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.30.27
+[2017.07.16-22.30.27:149][  2]LogWorld: Bringing up level for play took: 0.004472
+[2017.07.16-22.30.27:151][  2]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.766
+[2017.07.16-22.30.27:151][  2]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.30.32:251][612]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.30.32:293][612]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.30.50:110][263]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Mortar/mortar_barrel" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_barrel.uasset" SILENT=true
+[2017.07.16-22.30.50:121][263]LogSavePackage: Save=9.01ms
+[2017.07.16-22.30.50:121][263]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/mortar_barrel2734F8B049A5AAA4284502B8D2D5D06C.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_barrel.uasset'
+[2017.07.16-22.30.50:125][263]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Mortar/mortar_barrel.uasset
+[2017.07.16-22.31.39:295][864]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.07.16-22.31.50:374][842]BlueprintLog: New page: Compile MortarPawn_BP
+[2017.07.16-22.32.39:906][611]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.32.39:917][611]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.32.39:918][611]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.32.39:918][611]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:32:39 AM)
+[2017.07.16-22.32.39:918][611]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.32.39:992][611]LogPlayLevel: PIE: StaticDuplicateObject took: (0.073873s)
+[2017.07.16-22.32.39:993][611]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.32.39:993][611]LogPlayLevel: PIE: World Init took: (0.000804s)
+[2017.07.16-22.32.39:993][611]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.075153s)
+[2017.07.16-22.32.40:030][611]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.32.40:043][611]LogInit: FAudioDevice initialized.
+[2017.07.16-22.32.40:074][611]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.32.40:080][611]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.32.40
+[2017.07.16-22.32.40:081][611]LogWorld: Bringing up level for play took: 0.004593
+[2017.07.16-22.32.40:083][611]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.166
+[2017.07.16-22.32.40:083][611]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.33.08:748][602]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.33.08:791][602]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.33.19:211][444]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.33.19:222][444]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.33.19:222][444]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.33.19:222][444]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:33:19 AM)
+[2017.07.16-22.33.19:223][444]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.33.19:296][444]LogPlayLevel: PIE: StaticDuplicateObject took: (0.073332s)
+[2017.07.16-22.33.19:296][444]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.33.19:297][444]LogPlayLevel: PIE: World Init took: (0.000682s)
+[2017.07.16-22.33.19:297][444]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.074456s)
+[2017.07.16-22.33.19:331][444]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.33.19:342][444]LogInit: FAudioDevice initialized.
+[2017.07.16-22.33.19:373][444]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.33.19:379][444]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.33.19
+[2017.07.16-22.33.19:380][444]LogWorld: Bringing up level for play took: 0.004423
+[2017.07.16-22.33.19:382][444]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield -0.535
+[2017.07.16-22.33.19:382][444]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.34.08:700][356]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.34.08:748][356]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.34.10:553][550]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2017.07.16-22.34.10:851][550]LogSavePackage: Save=265.96ms
+[2017.07.16-22.34.10:851][550]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Battlefield60D3E125478E49C9FB6F949D0AD05345.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap'
+[2017.07.16-22.34.10:856][550]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap
+[2017.07.16-22.34.10:872][550]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield_BuiltData" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset" SILENT=true
+[2017.07.16-22.34.10:951][550]LogSavePackage: Save=72.32ms
+[2017.07.16-22.34.10:951][550]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Battlefield_BuiltData9EAC27804F152FE5EBD647A0F1E48FB3.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset'
+[2017.07.16-22.34.10:954][550]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset
+[2017.07.16-22.38.02:640][552]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2017.07.16-22.38.02:954][552]LogSavePackage: Save=280.16ms
+[2017.07.16-22.38.02:954][552]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Battlefield6407D4AD49FCCB438919B3AB5C571049.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap'
+[2017.07.16-22.38.02:961][552]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap
+[2017.07.16-22.38.03:023][552]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield_BuiltData" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset" SILENT=true
+[2017.07.16-22.38.03:116][552]LogSavePackage: Save=80.07ms
+[2017.07.16-22.38.03:117][552]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Battlefield_BuiltDataCA9AC9884AFAEF874A64FAA2F62BAC21.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset'
+[2017.07.16-22.38.03:121][552]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset
+[2017.07.16-22.48.02:477][250]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/Battlefield' took 0.021
+[2017.07.16-22.48.02:479][250]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Tank/Tank_BP] ([1] browsable assets)...
+[2017.07.16-22.48.02:497][250]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Tank/Tank_BP.Tank_BP]
+[2017.07.16-22.48.02:497][250]OBJ SavePackage: Finished generating thumbnails for package [/Game/Tank/Tank_BP]
+[2017.07.16-22.48.02:497][250]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Tank/Tank_BP" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2017.07.16-22.48.02:562][250]LogSavePackage: Save=57.37ms
+[2017.07.16-22.48.02:562][250]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Tank_BP_Auto1B6F695B94B339CC573B27CB5B85D8203.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto1.uasset'
+[2017.07.16-22.48.02:565][250]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto1.uasset
+[2017.07.16-22.48.02:566][250]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Mortar/MortarPawn_BP] ([1] browsable assets)...
+[2017.07.16-22.48.02:578][250]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Mortar/MortarPawn_BP.MortarPawn_BP]
+[2017.07.16-22.48.02:578][250]OBJ SavePackage: Finished generating thumbnails for package [/Game/Mortar/MortarPawn_BP]
+[2017.07.16-22.48.02:578][250]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Mortar/MortarPawn_BP" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Mortar/MortarPawn_BP_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2017.07.16-22.48.02:601][250]LogSavePackage: Save=21.24ms
+[2017.07.16-22.48.02:601][250]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/MortarPawn_BP_Auto10A91EC3E44674DB21BA66795B95F4BF7.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Mortar/MortarPawn_BP_Auto1.uasset'
+[2017.07.16-22.48.02:604][250]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Mortar/MortarPawn_BP_Auto1.uasset
+[2017.07.16-22.48.02:604][250]LogFileHelpers: Auto-saving content packages took 0.127
+[2017.07.16-22.49.30:859][247]LogEditorViewport: Clicking on Actor (LMB): MortarPawn_BP_C (MortarPawn_BP)
+[2017.07.16-22.49.34:301][628]LogEditorViewport: Clicking on Actor (LMB): MortarPawn_BP_C (MortarPawn_BP)
+[2017.07.16-22.49.37:285][979]LogEditorActor: Deleted Actor: MortarPawn_BP_C
+[2017.07.16-22.49.37:300][979]LogEditorActor: Deleted 1 Actors (0.016 secs)
+[2017.07.16-22.49.38:872][162]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2017.07.16-22.49.39:159][162]LogSavePackage: Save=254.68ms
+[2017.07.16-22.49.39:159][162]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/BattlefieldAC2C6B5C4016B3559D29F4B50072CD18.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap'
+[2017.07.16-22.49.39:164][162]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield.umap
+[2017.07.16-22.49.39:182][162]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Battlefield_BuiltData" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset" SILENT=true
+[2017.07.16-22.49.39:259][162]LogSavePackage: Save=70.07ms
+[2017.07.16-22.49.39:259][162]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Battlefield_BuiltData999416B04B1CA411EA8CC58F1C5652B3.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset'
+[2017.07.16-22.49.39:261][162]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Levels/Battlefield_BuiltData.uasset
+[2017.07.16-22.49.57:028][151]BlueprintLog: New page: Compile Tank_BP
+[2017.07.16-22.49.58:117][259]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Tank/Tank_BP" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Tank/Tank_BP.uasset" SILENT=true
+[2017.07.16-22.49.58:179][259]LogSavePackage: Save=55.49ms
+[2017.07.16-22.49.58:179][259]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Tank_BPCC4DCF554DE31804CACAD29DB0AB127B.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Tank/Tank_BP.uasset'
+[2017.07.16-22.49.58:184][259]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Content/Tank/Tank_BP.uasset
+[2017.07.16-22.50.19:704][773]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Source/BattleTank/Public/TankAimingComponent.h'
+[2017.07.16-22.50.19:746][773]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Source/BattleTank/Private/TankAimingComponent.cpp'
+[2017.07.16-22.52.48:914][264]Candidate modules for hot reload:
+[2017.07.16-22.52.48:914][264]  BattleTank
+[2017.07.16-22.52.48:914][264]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 1506 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-22.52.48:916][264]Warning: Starting HotReload took  0.0s.
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 8:53:01 AM
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info Parsing headers for BattleTankEditor
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\BattleTank.uproject" "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\BattleTankEditor\Development\BattleTankEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info Reflection code generated for BattleTankEditor in 6.2591175 seconds
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info Performing 6 actions (9 in parallel)
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info TankPlayerController.cpp
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info TankAIController1.cpp
+[2017.07.16-22.53.01:944][678]CompilerResultsLog: Info BattleTank.generated.cpp
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info TankAimingComponent.cpp
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info [5/6] Link UE4Editor-BattleTank-1506.dll
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info [6/6] Link UE4Editor-BattleTank-1506.lib
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1506.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1506.exp
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1506.suppressed.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1506.suppressed.exp
+[2017.07.16-22.53.01:945][678]CompilerResultsLog: Info Total build time: 12.79 seconds (Local executor: 3.17 seconds)
+[2017.07.16-22.53.01:945][678]LogMainFrame: MainFrame: Module compiling took 13.046 seconds
+[2017.07.16-22.53.02:015][678]LogClass: Could not find existing class TankAimingComponent in package /Script/BattleTank for HotReload, assuming new class
+[2017.07.16-22.53.02:016][678]LogClass: Function Fire is new.
+[2017.07.16-22.53.02:016][678]LogClass: Function GetRoundsLeft is new.
+[2017.07.16-22.53.02:016][678]LogClass: Function Initialise is new.
+[2017.07.16-22.53.02:020][678]LogClass: EFiringStatus HotReload.
+[2017.07.16-22.53.02:025][678]LogHotReload: Re-instancing TankAimingComponent after hot-reload.
+[2017.07.16-22.53.02:107][678]LogContentBrowser: Native class hierarchy updated for 'BattleTank' in 0.0030 seconds. Added 11 classes and 3 folders.
+[2017.07.16-22.53.02:110][678]Display: HotReload successful (5 functions remapped  0 scriptstructs remapped)
+[2017.07.16-22.53.02:438][678]LogContentBrowser: Native class hierarchy populated in 0.0107 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-22.53.02:438][678]Display: HotReload took 13.6s.
+[2017.07.16-22.53.08:449][313]BlueprintLog: New page: Compile Tank_BP
+[2017.07.16-22.53.10:354][516]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-22.53.10:368][516]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.53.10:368][516]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-22.53.10:368][516]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 8:53:10 AM)
+[2017.07.16-22.53.10:369][516]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-22.53.10:448][516]LogPlayLevel: PIE: StaticDuplicateObject took: (0.079779s)
+[2017.07.16-22.53.10:449][516]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-22.53.10:449][516]LogPlayLevel: PIE: World Init took: (0.000810s)
+[2017.07.16-22.53.10:450][516]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.081079s)
+[2017.07.16-22.53.10:485][516]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-22.53.10:496][516]LogInit: FAudioDevice initialized.
+[2017.07.16-22.53.10:531][516]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-22.53.10:536][516]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-15.53.10
+[2017.07.16-22.53.10:537][516]LogWorld: Bringing up level for play took: 0.004116
+[2017.07.16-22.53.10:539][516]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 0.622
+[2017.07.16-22.53.10:539][516]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.53.10:553][516]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:572][517]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:578][518]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:587][519]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:595][520]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:603][521]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:611][522]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:620][523]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:629][524]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:637][525]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:644][526]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:653][527]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:661][528]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:670][529]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:678][530]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:686][531]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.10:694][532]LogScript:Warning: Attempted to access missing property. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	PlayerUI_BP_C /Engine/Transient.UnrealEdEngine_0:GameInstance_18.PlayerUI_BP_C_18
+	Function /Game/UI/PlayerUI_BP.PlayerUI_BP_C:Get_AimPoint_ColorAndOpacity_0:0103
+[2017.07.16-22.53.13:413][858]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.53.13:452][858]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-22.54.30:207][360]BlueprintLog: New page: Compile Projectile_BP
+[2017.07.16-22.57.33:583][930]LogVSAccessor:Warning: Couldn't access Visual Studio
+[2017.07.16-22.57.33:598][930]Candidate modules for hot reload:
+[2017.07.16-22.57.33:598][930]  BattleTank
+[2017.07.16-22.57.33:598][930]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 4548 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-22.57.33:600][930]Warning: Starting HotReload took  0.0s.
+[2017.07.16-22.57.47:724][724]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 8:57:47 AM
+[2017.07.16-22.57.47:724][724]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-22.57.47:724][724]CompilerResultsLog: Info Parsing headers for BattleTankEditor
+[2017.07.16-22.57.47:724][724]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\BattleTank.uproject" "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\BattleTankEditor\Development\BattleTankEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info Reflection code generated for BattleTankEditor in 6.8795636 seconds
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info Performing 8 actions (9 in parallel)
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info BattleTank.generated.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info TankPawn.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info Projectile.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info TankAimingComponent.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info TankPlayerController.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info TankAIController1.cpp
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info [7/8] Link UE4Editor-BattleTank-4548.dll
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info [8/8] Link UE4Editor-BattleTank-4548.lib
+[2017.07.16-22.57.47:725][724]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-4548.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-4548.exp
+[2017.07.16-22.57.47:726][724]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-4548.suppressed.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-4548.suppressed.exp
+[2017.07.16-22.57.47:726][724]CompilerResultsLog: Info Total build time: 13.90 seconds (Local executor: 3.69 seconds)
+[2017.07.16-22.57.47:726][724]LogMainFrame: MainFrame: Module compiling took 14.143 seconds
+[2017.07.16-22.57.47:809][724]LogClass: Could not find existing class Projectile in package /Script/BattleTank for HotReload, assuming new class
+[2017.07.16-22.57.47:818][724]LogClass: EFiringStatus HotReload.
+[2017.07.16-22.57.47:823][724]LogHotReload: Re-instancing Projectile after hot-reload.
+[2017.07.16-22.57.48:246][724]LogContentBrowser: Native class hierarchy updated for 'BattleTank' in 0.0032 seconds. Added 11 classes and 3 folders.
+[2017.07.16-22.57.48:249][724]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2017.07.16-22.57.48:587][724]LogContentBrowser: Native class hierarchy populated in 0.0128 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-22.57.48:587][724]Display: HotReload took 15.0s.
+[2017.07.16-22.57.55:376][131]LogVSAccessor:Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2017.07.16-22.57.56:843][132]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Source/BattleTank/Public/Projectile.h'
+[2017.07.16-22.57.56:888][132]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Source/BattleTank/Private/Projectile.cpp'
+[2017.07.16-22.59.42:659][450]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/Battlefield' took 0.047
+[2017.07.16-22.59.42:662][450]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Tank/Tank_BP] ([1] browsable assets)...
+[2017.07.16-22.59.42:673][450]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Tank/Tank_BP.Tank_BP]
+[2017.07.16-22.59.42:673][450]OBJ SavePackage: Finished generating thumbnails for package [/Game/Tank/Tank_BP]
+[2017.07.16-22.59.42:674][450]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Tank/Tank_BP" FILE="C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2017.07.16-22.59.42:743][450]LogSavePackage: Save=60.93ms
+[2017.07.16-22.59.42:743][450]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Tank_BP_Auto219B7C6B848AE50E3AF792F9D07AD25C5.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto2.uasset'
+[2017.07.16-22.59.42:746][450]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Tank_BP_Auto2.uasset
+[2017.07.16-22.59.42:747][450]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Tank/Projectile/Projectile_BP] ([1] browsable assets)...
+[2017.07.16-22.59.42:748][450]OBJ SavePackage: Finished generating thumbnails for package [/Game/Tank/Projectile/Projectile_BP]
+[2017.07.16-22.59.42:760][450]LogSavePackage: Save=6.22ms
+[2017.07.16-22.59.42:761][450]LogSavePackage: Moving 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Projectile_BP_Auto20A5B4707490A30E62A7E328860701C5D.tmp' to 'C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Projectile/Projectile_BP_Auto2.uasset'
+[2017.07.16-22.59.42:763][450]LogSavePackage:Display: Finished SavePackage C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/Saved/Autosaves/Game/Tank/Projectile/Projectile_BP_Auto2.uasset
+[2017.07.16-22.59.42:763][450]LogFileHelpers: Auto-saving content packages took 0.102
+[2017.07.16-23.00.13:270][640]Candidate modules for hot reload:
+[2017.07.16-23.00.13:270][640]  BattleTank
+[2017.07.16-23.00.13:270][640]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 1071 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-23.00.13:274][640]Warning: Starting HotReload took  0.1s.
+[2017.07.16-23.00.28:628][754]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 9:00:28 AM
+[2017.07.16-23.00.28:629][754]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-23.00.28:629][754]CompilerResultsLog: Info Parsing headers for BattleTankEditor
+[2017.07.16-23.00.28:629][754]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\BattleTank.uproject" "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\BattleTankEditor\Development\BattleTankEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.16-23.00.28:630][754]CompilerResultsLog: Info Reflection code generated for BattleTankEditor in 6.7478629 seconds
+[2017.07.16-23.00.28:630][754]CompilerResultsLog: Info Performing 8 actions (9 in parallel)
+[2017.07.16-23.00.28:630][754]CompilerResultsLog: Info TankPlayerController.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info TankAimingComponent.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info BattleTank.generated.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info Projectile.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info TankPawn.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info TankAIController1.cpp
+[2017.07.16-23.00.28:631][754]CompilerResultsLog: Info [7/8] Link UE4Editor-BattleTank-1071.dll
+[2017.07.16-23.00.28:632][754]CompilerResultsLog: Info [8/8] Link UE4Editor-BattleTank-1071.lib
+[2017.07.16-23.00.28:632][754]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1071.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1071.exp
+[2017.07.16-23.00.28:633][754]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1071.suppressed.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1071.suppressed.exp
+[2017.07.16-23.00.28:634][754]CompilerResultsLog: Info Total build time: 14.80 seconds (Local executor: 3.68 seconds)
+[2017.07.16-23.00.28:634][754]LogMainFrame: MainFrame: Module compiling took 15.390 seconds
+[2017.07.16-23.00.28:790][754]LogClass: EFiringStatus HotReload.
+[2017.07.16-23.00.28:793][754]LogHotReload: Re-instancing Projectile after hot-reload.
+[2017.07.16-23.00.29:414][754]LogContentBrowser: Native class hierarchy updated for 'BattleTank' in 0.0032 seconds. Added 11 classes and 3 folders.
+[2017.07.16-23.00.29:417][754]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2017.07.16-23.00.29:733][754]LogContentBrowser: Native class hierarchy populated in 0.0108 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-23.00.29:733][754]Display: HotReload took 16.6s.
+[2017.07.16-23.02.50:138][378]Candidate modules for hot reload:
+[2017.07.16-23.02.50:138][378]  BattleTank
+[2017.07.16-23.02.50:138][378]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 5355 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-23.02.50:140][378]Warning: Starting HotReload took  0.0s.
+[2017.07.16-23.03.03:794][791]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 9:03:03 AM
+[2017.07.16-23.03.03:794][791]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-23.03.03:795][791]CompilerResultsLog: Info Parsing headers for BattleTankEditor
+[2017.07.16-23.03.03:795][791]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\BattleTank.uproject" "C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\BattleTankEditor\Development\BattleTankEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2017.07.16-23.03.03:795][791]CompilerResultsLog: Info Reflection code generated for BattleTankEditor in 6.3493615 seconds
+[2017.07.16-23.03.03:795][791]CompilerResultsLog: Info Performing 8 actions (9 in parallel)
+[2017.07.16-23.03.03:795][791]CompilerResultsLog: Info TankAimingComponent.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info TankPawn.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info TankAIController1.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info Projectile.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info TankPlayerController.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info BattleTank.generated.cpp
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info [7/8] Link UE4Editor-BattleTank-5355.dll
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info [8/8] Link UE4Editor-BattleTank-5355.lib
+[2017.07.16-23.03.03:796][791]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-5355.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-5355.exp
+[2017.07.16-23.03.03:797][791]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-5355.suppressed.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-5355.suppressed.exp
+[2017.07.16-23.03.03:797][791]CompilerResultsLog: Info Total build time: 13.42 seconds (Local executor: 3.66 seconds)
+[2017.07.16-23.03.03:797][791]LogMainFrame: MainFrame: Module compiling took 13.674 seconds
+[2017.07.16-23.03.03:902][791]LogClass: Could not find existing class Projectile in package /Script/BattleTank for HotReload, assuming new class
+[2017.07.16-23.03.03:914][791]LogClass: EFiringStatus HotReload.
+[2017.07.16-23.03.03:919][791]LogHotReload: Re-instancing Projectile after hot-reload.
+[2017.07.16-23.03.04:506][791]LogContentBrowser: Native class hierarchy updated for 'BattleTank' in 0.0031 seconds. Added 11 classes and 3 folders.
+[2017.07.16-23.03.04:510][791]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2017.07.16-23.03.04:771][791]LogContentBrowser: Native class hierarchy populated in 0.0122 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-23.03.04:771][791]Display: HotReload took 14.7s.
+[2017.07.16-23.03.25:085][907]BlueprintLog: New page: Compile Projectile_BP
+[2017.07.16-23.05.11:794][587]Candidate modules for hot reload:
+[2017.07.16-23.05.11:794][587]  BattleTank
+[2017.07.16-23.05.11:794][587]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 7857 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-23.05.11:796][587]Warning: Starting HotReload took  0.0s.
+[2017.07.16-23.05.18:180][690]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 9:05:18 AM
+[2017.07.16-23.05.18:180][690]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-23.05.18:180][690]CompilerResultsLog: Info Performing 3 actions (9 in parallel)
+[2017.07.16-23.05.18:180][690]CompilerResultsLog: Info Projectile.cpp
+[2017.07.16-23.05.18:180][690]CompilerResultsLog:Error: Error C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Source\BattleTank\Private\Projectile.cpp(19) : warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info D:\Program Files (x86)\Epic Games\UE_4.16\Engine\Source\Runtime\Engine\Classes\Components/SceneComponent.h(615): note: see declaration of 'USceneComponent::AttachTo'
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info [2/3] Link UE4Editor-BattleTank-7857.dll
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info [3/3] Link UE4Editor-BattleTank-7857.lib
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-7857.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-7857.exp
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info    Creating library C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-7857.suppressed.lib and object C:\Users\pears\Desktop\Tank2\TankFight\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-7857.suppressed.exp
+[2017.07.16-23.05.18:181][690]CompilerResultsLog: Info Total build time: 6.15 seconds (Local executor: 2.35 seconds)
+[2017.07.16-23.05.18:182][690]LogMainFrame: MainFrame: Module compiling took 6.401 seconds
+[2017.07.16-23.05.18:281][690]LogClass: EFiringStatus HotReload.
+[2017.07.16-23.05.18:283][690]LogHotReload: Re-instancing Projectile after hot-reload.
+[2017.07.16-23.05.18:896][690]LogContentBrowser: Native class hierarchy updated for 'BattleTank' in 0.0037 seconds. Added 11 classes and 3 folders.
+[2017.07.16-23.05.18:903][690]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2017.07.16-23.05.19:181][690]LogContentBrowser: Native class hierarchy populated in 0.0118 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-23.05.19:181][690]Display: HotReload took  7.4s.
+[2017.07.16-23.05.20:716][831]Candidate modules for hot reload:
+[2017.07.16-23.05.20:716][831]  BattleTank
+[2017.07.16-23.05.20:717][831]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/UE_4.16/Engine/Binaries/DotNET/UnrealBuildTool.exe BattleTank -ModuleWithSuffix BattleTank 559 Win64 Development -editorrecompile -canskiplink "C:/Users/pears/Desktop/Tank2/TankFight/BattleTank/BattleTank.uproject" ]
+[2017.07.16-23.05.20:718][831]Warning: Starting HotReload took  0.0s.
+[2017.07.16-23.05.24:897][909]CompilerResultsLog: New page: Compilation - Jul 16, 2017, 9:05:24 AM
+[2017.07.16-23.05.24:898][909]CompilerResultsLog: Info Compiling game modules for hot reload
+[2017.07.16-23.05.24:898][909]CompilerResultsLog: Info Target is up to date
+[2017.07.16-23.05.24:899][909]CompilerResultsLog: Info Total build time: 3.73 seconds (NoActionsToExecute executor: 0.00 seconds)
+[2017.07.16-23.05.24:901][909]LogMainFrame: MainFrame: Module compiling took 4.198 seconds
+[2017.07.16-23.05.25:341][909]LogContentBrowser: Native class hierarchy populated in 0.0317 seconds. Added 2342 classes and 498 folders.
+[2017.07.16-23.05.25:341][909]Display: HotReload took  4.6s.
+[2017.07.16-23.05.32:823][459]LogTemp: Repeting last play command: Selected Viewport
+[2017.07.16-23.05.32:844][459]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-23.05.32:844][459]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.07.16-23.05.32:844][459]PIE: New page: PIE session: Battlefield (Jul 16, 2017, 9:05:32 AM)
+[2017.07.16-23.05.32:844][459]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Battlefield
+[2017.07.16-23.05.32:925][459]LogPlayLevel: PIE: StaticDuplicateObject took: (0.080310s)
+[2017.07.16-23.05.32:925][459]LogAIModule: Creating AISystem for world Battlefield
+[2017.07.16-23.05.32:926][459]LogPlayLevel: PIE: World Init took: (0.000760s)
+[2017.07.16-23.05.32:926][459]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Battlefield.Battlefield to /Game/Levels/UEDPIE_0_Battlefield.Battlefield (0.081508s)
+[2017.07.16-23.05.32:997][459]LogInit: XAudio2 using 'Speakers / Headphones (Plantronics HD1)' : 6 channels at 48 kHz using 24 bits per sample (channel mask 0x3f)
+[2017.07.16-23.05.33:009][459]LogInit: FAudioDevice initialized.
+[2017.07.16-23.05.33:043][459]LogLoad: Game class is 'BattleTankGameMode_BP_C'
+[2017.07.16-23.05.33:049][459]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Battlefield.Battlefield up for play (max tick rate 0) at 2017.07.16-16.05.33
+[2017.07.16-23.05.33:049][459]LogWorld: Bringing up level for play took: 0.004103
+[2017.07.16-23.05.33:051][459]PIE: Info Play in editor start time for /Game/Levels/UEDPIE_0_Battlefield 1.134
+[2017.07.16-23.05.33:051][459]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-23.05.34:637][645]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-23.05.34:679][645]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Battlefield.Battlefield:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield' with GeneratedClass '/Game/Levels/Battlefield.Battlefield_C' with ClassGeneratedBy '/Game/Levels/Battlefield.Battlefield:PersistentLevel.Battlefield'
+[2017.07.16-23.05.59:545][125]LogEditorTransaction: Undo Edit Static Mesh
+[2017.07.16-23.06.01:280][295]BlueprintLog: New page: Compile Projectile_BP
+[2017.07.16-23.06.01:284][295]LogUObjectGlobals:Warning: Guid referenced by ProjectileMovementComponent /Engine/Transient.World_11:PersistentLevel.Projectile_BP_C_11.Projectile Movement is already used by ProjectileMovementComponent /Engine/Transient.World_11:PersistentLevel.REINST_Projectile_BP_C_0.Projectile Movement, which should never happen in the editor but could happen at runtime with duplicate level loading or PIE
+[2017.07.16-23.06.01:285][295]LogUObjectGlobals:Warning: Guid referenced by StaticMeshComponent /Engine/Transient.World_11:PersistentLevel.Projectile_BP_C_11.Collision Mesh is already used by StaticMeshComponent /Engine/Transient.World_11:PersistentLevel.REINST_Projectile_BP_C_0.Collision Mesh, which should never happen in the editor but could happen at runtime with duplicate level loading or PIE
+[2017.07.16-23.06.01:285][295]LogUObjectGlobals:Warning: Guid referenced by ParticleSystemComponent /Engine/Transient.World_11:PersistentLevel.Projectile_BP_C_11.Launch Blast is already used by ParticleSystemComponent /Engine/Transient.World_11:PersistentLevel.REINST_Projectile_BP_C_0.Launch Blast, which should never happen in the editor but could happen at runtime with duplicate level loading or PIE
+[2017.07.16-23.06.01:286][295]LogWorld: --- Actors Currently in /Engine/Transient.World_11:PersistentLevel ---
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.WorldSettings
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.Brush_11
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.DefaultPhysicsVolume_11
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.ParticleEventManager_11
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   NONE
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.Projectile_BP_C_42
+[2017.07.16-23.06.01:286][295]LogWorld:   /Engine/Transient.World_11:PersistentLevel.Projectile_BP_C_11
+[2017.07.16-23.06.01:552][295]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.266 s
+[2017.07.16-23.06.01:552][295]LogOutputDevice:Error: === Handled ensure: ===
+[2017.07.16-23.06.01:553][295]LogOutputDevice:Error: 
+[2017.07.16-23.06.01:553][295]LogOutputDevice:Error: Ensure condition failed: false [File:D:\Build\++UE4+Release-4.16+Compile\Sync\Engine\Source\Runtime\Engine\Private\World.cpp] [Line: 1502]
+[2017.07.16-23.06.01:553][295]LogOutputDevice:Error: Could not remove actor /Engine/Transient.World_11:PersistentLevel.REINST_Projectile_BP_C_0 from world (check level is /Engine/Transient.World_11:PersistentLevel)
+[2017.07.16-23.06.01:553][295]LogOutputDevice:Error: Stack: 
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099F0E256
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099CBB862
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099CD1E26
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Engine.dll!0x0000000088847B96
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Engine.dll!0x0000000087F3A8E3
+[2017.07.16-23.06.01:554][295]LogOutputDevice:Error: UE4Editor-Engine.dll!0x0000000087F40353
+[2017.07.16-23.06.01:555][295]LogOutputDevice:Error: UE4Editor-UnrealEd.dll!0x000000009343D79B
+[2017.07.16-23.06.01:555][295]LogOutputDevice:Error: UE4Editor-UnrealEd.dll!0x000000009343C228
+[2017.07.16-23.06.01:555][295]LogOutputDevice:Error: UE4Editor-UnrealEd.dll!0x000000009343751A
+[2017.07.16-23.06.01:555][295]LogOutputDevice:Error: UE4Editor-UnrealEd.dll!0x0000000093438672
+[2017.07.16-23.06.01:555][295]LogOutputDevice:Error: UE4Editor-UnrealEd.dll!0x000000009340B9E3
+[2017.07.16-23.06.01:556][295]LogOutputDevice:Error: UE4Editor-Kismet.dll!0x0000000086C50EAA
+[2017.07.16-23.06.01:556][295]LogOutputDevice:Error: UE4Editor-Kismet.dll!0x0000000086CA0991
+[2017.07.16-23.06.01:556][295]LogOutputDevice:Error: UE4Editor-Kismet.dll!0x0000000086CA55D6
+[2017.07.16-23.06.01:556][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x00000000948BEB7F
+[2017.07.16-23.06.01:556][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x00000000949B7EF2
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094923DD2
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094925079
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094997C05
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094A48F57
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094A75D7B
+[2017.07.16-23.06.01:557][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094899E9C
+[2017.07.16-23.06.01:558][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x0000000094869835
+[2017.07.16-23.06.01:558][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x000000009490E5E2
+[2017.07.16-23.06.01:558][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x00000000948F720F
+[2017.07.16-23.06.01:558][295]LogOutputDevice:Error: UE4Editor-Slate.dll!0x00000000948E8391
+[2017.07.16-23.06.01:558][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099F016FB
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099EEB771
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099F0337B
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099EE7AC2
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: USER32.dll!0x00000000C6D0BC50
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: USER32.dll!0x00000000C6D0B5CF
+[2017.07.16-23.06.01:559][295]LogOutputDevice:Error: UE4Editor-Core.dll!0x0000000099F03C86
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: UE4Editor.exe!0x000000006CF7DB44
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: UE4Editor.exe!0x000000006CF6F0B0
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: UE4Editor.exe!0x000000006CF6F12A
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: UE4Editor.exe!0x000000006CF80CF9
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: UE4Editor.exe!0x000000006CF825F7
+[2017.07.16-23.06.01:560][295]LogOutputDevice:Error: KERNEL32.DLL!0x00000000C6EC2774
+[2017.07.16-23.06.01:561][295]LogOutputDevice:Error: ntdll.dll!0x00000000C9340D51
+[2017.07.16-23.06.01:561][295]LogOutputDevice:Error: 
+[2017.07.16-23.06.01:571][295]LogStats:                SubmitErrorReport -  0.000 s
