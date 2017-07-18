@@ -20,6 +20,12 @@ private:
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* otherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float DestroyDelay = 10.0f;
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float DamageAmount = 20.0f;
+
+		void OnTimerExpire();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

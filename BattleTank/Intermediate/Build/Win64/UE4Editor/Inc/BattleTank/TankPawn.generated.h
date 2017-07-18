@@ -59,7 +59,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATankPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATankPawn)
 
 
-#define BattleTank_Source_BattleTank_Public_TankPawn_h_14_PRIVATE_PROPERTY_OFFSET
+#define BattleTank_Source_BattleTank_Public_TankPawn_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__StartingHealth() { return STRUCT_OFFSET(ATankPawn, StartingHealth); } \
+	FORCEINLINE static uint32 __PPO__CurrentHealth() { return STRUCT_OFFSET(ATankPawn, CurrentHealth); }
+
+
 #define BattleTank_Source_BattleTank_Public_TankPawn_h_11_PROLOG
 #define BattleTank_Source_BattleTank_Public_TankPawn_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

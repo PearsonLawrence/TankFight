@@ -2,6 +2,8 @@
 
 #include "../Public/Projectile.h"
 #include "Engine/World.h"
+#include "Runtime/Engine/Public/TimerManager.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Components/StaticMeshComponent.h"
 // Sets default values
 AProjectile::AProjectile()
@@ -24,6 +26,7 @@ AProjectile::AProjectile()
 	ImpactBlast->bAutoActivate = false;
 
 	ExplosionForce = CreateDefaultSubobject<URadialForceComponent>(FName("Explosion Force"));
+	ExplosionForce->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
 // Called when the game starts or when spawned
@@ -35,14 +38,32 @@ void AProjectile::BeginPlay()
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* otherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	UE_LOG(LogTemp, Error, TEXT("%s hit"), *GetName())
-		SetRootComponent(ImpactBlast);
+	SetRootComponent(ImpactBlast);
+
+	ExplosionForce->FireImpulse();
 	CollisionMesh->DestroyComponent();
 	PS->Deactivate();
 	ImpactBlast->Activate();
-	ExplosionForce->FireImpulse();
 
+	UGameplayStatics::ApplyRadialDamage(
+		this,
+		DamageAmount,
+		GetActorLocation(),
+		ExplosionForce->Radius,
+		UDamageType::StaticClass(),
+		TArray<AActor*>() // damage all actors
+	);
+
+	FTimerHandle Timer;
+	FTimerDelegate Delegate;
+	Delegate.BindLambda([this] { Destroy(); });
+	GetWorld()->GetTimerManager().SetTimer(Timer, Delegate, DestroyDelay, false);
 	
+}
+
+void AProjectile::OnTimerExpire()
+{
+	Destroy();
 }
 
 void AProjectile::LaunchProjectile(float speed)
