@@ -13,8 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BATTLETANK_TankAIController1_generated_h
 
-#define BattleTank_Source_BattleTank_Public_TankAIController1_h_16_RPC_WRAPPERS
-#define BattleTank_Source_BattleTank_Public_TankAIController1_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define BattleTank_Source_BattleTank_Public_TankAIController1_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnPossedTankDeath) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnPossedTankDeath(); \
+		P_NATIVE_END; \
+	}
+
+
+#define BattleTank_Source_BattleTank_Public_TankAIController1_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnPossedTankDeath) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnPossedTankDeath(); \
+		P_NATIVE_END; \
+	}
+
+
 #define BattleTank_Source_BattleTank_Public_TankAIController1_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATankAIController1(); \

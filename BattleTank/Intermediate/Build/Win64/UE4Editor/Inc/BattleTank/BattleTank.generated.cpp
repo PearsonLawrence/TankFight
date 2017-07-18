@@ -38,6 +38,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 	BATTLETANK_API class UClass* Z_Construct_UClass_AProjectile();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATank_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATank();
+	BATTLETANK_API class UFunction* Z_Construct_UFunction_ATankAIController1_OnPossedTankDeath();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankAIController1_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankAIController1();
 	BATTLETANK_API class UEnum* Z_Construct_UEnum_BattleTank_EFiringStatus();
@@ -57,6 +58,8 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 	BATTLETANK_API class UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendTurnRight();
 	BATTLETANK_API class UClass* Z_Construct_UClass_UTankMovementComponent_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_UTankMovementComponent();
+	BATTLETANK_API class UFunction* Z_Construct_UDelegateFunction_BattleTank_TankDelegate__DelegateSignature();
+	BATTLETANK_API class UFunction* Z_Construct_UFunction_ATankPawn_GetHealthPercent();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPawn_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPawn();
 	BATTLETANK_API class UFunction* Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent();
@@ -245,6 +248,27 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATank);
 	void ATankAIController1::StaticRegisterNativesATankAIController1()
 	{
+		UClass* Class = ATankAIController1::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "OnPossedTankDeath", (Native)&ATankAIController1::execOnPossedTankDeath },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 1);
+	}
+	UFunction* Z_Construct_UFunction_ATankAIController1_OnPossedTankDeath()
+	{
+		UObject* Outer=Z_Construct_UClass_ATankAIController1();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnPossedTankDeath"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00040401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/TankAIController1.h"));
+#endif
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ATankAIController1_NoRegister()
 	{
@@ -263,10 +287,12 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900280;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ATankAIController1_OnPossedTankDeath());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_AcceptanceRadius = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("AcceptanceRadius"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(AcceptanceRadius, ATankAIController1), 0x0020080000000001);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ATankAIController1_OnPossedTankDeath(), "OnPossedTankDeath"); // 1725139473
 				static TCppClassTypeInfo<TCppClassTypeTraits<ATankAIController1> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -284,7 +310,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATankAIController1, 4067625870);
+	IMPLEMENT_CLASS(ATankAIController1, 2082832352);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATankAIController1(Z_Construct_UClass_ATankAIController1, &ATankAIController1::StaticClass, TEXT("/Script/BattleTank"), TEXT("ATankAIController1"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATankAIController1);
 static UEnum* EFiringStatus_StaticEnum()
@@ -741,8 +767,52 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	IMPLEMENT_CLASS(UTankMovementComponent, 4094942853);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTankMovementComponent(Z_Construct_UClass_UTankMovementComponent, &UTankMovementComponent::StaticClass, TEXT("/Script/BattleTank"), TEXT("UTankMovementComponent"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTankMovementComponent);
+	UFunction* Z_Construct_UDelegateFunction_BattleTank_TankDelegate__DelegateSignature()
+	{
+		UObject* Outer=Z_Construct_UPackage__Script_BattleTank();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("TankDelegate__DelegateSignature"), RF_Public|RF_Transient|RF_MarkAsNative) UDelegateFunction(FObjectInitializer(), NULL, 0x00130000, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/TankPawn.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	void ATankPawn::StaticRegisterNativesATankPawn()
 	{
+		UClass* Class = ATankPawn::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "GetHealthPercent", (Native)&ATankPawn::execGetHealthPercent },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 1);
+	}
+	UFunction* Z_Construct_UFunction_ATankPawn_GetHealthPercent()
+	{
+		struct TankPawn_eventGetHealthPercent_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ATankPawn();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetHealthPercent"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x54020401, 65535, sizeof(TankPawn_eventGetHealthPercent_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, TankPawn_eventGetHealthPercent_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Health"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/TankPawn.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("returns current health as a percentage of starting health between 0 and  1"));
+#endif
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ATankPawn_NoRegister()
 	{
@@ -761,11 +831,13 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ATankPawn_GetHealthPercent());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_CurrentHealth = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CurrentHealth"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(CurrentHealth, ATankPawn), 0x0040000000020001);
-				UProperty* NewProp_StartingHealth = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("StartingHealth"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(StartingHealth, ATankPawn), 0x0040000000010001);
+				UProperty* NewProp_StartingHealth = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("StartingHealth"), RF_Public|RF_Transient|RF_MarkAsNative) UIntProperty(CPP_PROPERTY_BASE(StartingHealth, ATankPawn), 0x0040000000020001);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ATankPawn_GetHealthPercent(), "GetHealthPercent"); // 1723744118
 				static TCppClassTypeInfo<TCppClassTypeTraits<ATankPawn> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -784,7 +856,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATankPawn, 1418256888);
+	IMPLEMENT_CLASS(ATankPawn, 428318662);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATankPawn(Z_Construct_UClass_ATankPawn, &ATankPawn::StaticClass, TEXT("/Script/BattleTank"), TEXT("ATankPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATankPawn);
 	static FName NAME_ATankPlayerController_FoundAimingComponent = FName(TEXT("FoundAimingComponent"));
@@ -917,12 +989,13 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BattleTank")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x5DF0FA89;
-			Guid.B = 0xCC0B998C;
+			Guid.A = 0x55C1CDFA;
+			Guid.B = 0x522C5BB3;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
 
+			Z_Construct_UDelegateFunction_BattleTank_TankDelegate__DelegateSignature();
 		}
 		return ReturnPackage;
 	}

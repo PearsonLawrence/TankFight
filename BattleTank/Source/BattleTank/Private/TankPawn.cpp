@@ -12,6 +12,11 @@ ATankPawn::ATankPawn()
 	
 }
 
+float ATankPawn::GetHealthPercent() const
+{
+	return (float)CurrentHealth / StartingHealth;
+}
+
 float ATankPawn::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
 	int32 DamagePoints = FPlatformMath::RoundToInt(DamageAmount);
@@ -19,8 +24,7 @@ float ATankPawn::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent
 	CurrentHealth -= DamageToApply;
 	if (CurrentHealth <= 0)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("dead"));
-
+		OnDeath.Broadcast();
 	}
 	else
 	UE_LOG(LogTemp, Warning, TEXT("DamageAmount = %f, DamageToApply = %i"), DamageAmount, DamageToApply);
