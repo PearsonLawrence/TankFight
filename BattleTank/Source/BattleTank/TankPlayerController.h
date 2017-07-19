@@ -21,6 +21,8 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 		void FoundAimingComponent(UTankAimingComponent* AimRef);
 
+	UFUNCTION()
+	void OnPossedTankDeath();
 private:
 	
 	
@@ -40,6 +42,9 @@ private:
 		float LineTraceRange = 1000000.0f;
 
 public:
+
+	void SetPawn(APawn * InPawn);
+
 
 	void BeginPlay() override;
 

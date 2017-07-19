@@ -63,6 +63,7 @@ void EmptyLinkFunctionForGeneratedCode1BattleTank() {}
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPawn_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPawn();
 	BATTLETANK_API class UFunction* Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent();
+	BATTLETANK_API class UFunction* Z_Construct_UFunction_ATankPlayerController_OnPossedTankDeath();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPlayerController_NoRegister();
 	BATTLETANK_API class UClass* Z_Construct_UClass_ATankPlayerController();
 	BATTLETANK_API class UClass* Z_Construct_UClass_UTankTurret_NoRegister();
@@ -868,6 +869,11 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	void ATankPlayerController::StaticRegisterNativesATankPlayerController()
 	{
+		UClass* Class = ATankPlayerController::StaticClass();
+		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
+			{ "OnPossedTankDeath", (Native)&ATankPlayerController::execOnPossedTankDeath },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 1);
 	}
 	UFunction* Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent()
 	{
@@ -884,6 +890,22 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Setup"));
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TankPlayerController.h"));
 			MetaData->SetValue(NewProp_AimRef, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ATankPlayerController_OnPossedTankDeath()
+	{
+		UObject* Outer=Z_Construct_UClass_ATankPlayerController();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnPossedTankDeath"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00080401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TankPlayerController.h"));
 #endif
 		}
 		return ReturnFunction;
@@ -906,6 +928,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->ClassFlags |= 0x20900284;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent());
+				OuterClass->LinkChild(Z_Construct_UFunction_ATankPlayerController_OnPossedTankDeath());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_LineTraceRange = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("LineTraceRange"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(LineTraceRange, ATankPlayerController), 0x0040000000000001);
@@ -913,6 +936,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_CrosshairXLocation = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CrosshairXLocation"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(CrosshairXLocation, ATankPlayerController), 0x0040000000000001);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ATankPlayerController_FoundAimingComponent(), "FoundAimingComponent"); // 1668283234
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_ATankPlayerController_OnPossedTankDeath(), "OnPossedTankDeath"); // 3037739129
 				OuterClass->ClassConfigName = FName(TEXT("Game"));
 				static TCppClassTypeInfo<TCppClassTypeTraits<ATankPlayerController> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
@@ -934,7 +958,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATankPlayerController, 273003295);
+	IMPLEMENT_CLASS(ATankPlayerController, 3134965289);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATankPlayerController(Z_Construct_UClass_ATankPlayerController, &ATankPlayerController::StaticClass, TEXT("/Script/BattleTank"), TEXT("ATankPlayerController"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATankPlayerController);
 	void UTankTurret::StaticRegisterNativesUTankTurret()
@@ -989,8 +1013,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/BattleTank")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x55C1CDFA;
-			Guid.B = 0x522C5BB3;
+			Guid.A = 0x96BD7DA5;
+			Guid.B = 0xE5BBEDE6;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

@@ -12,6 +12,13 @@ ATankPawn::ATankPawn()
 	
 }
 
+void ATankPawn::BeginPlay()
+{
+	Super::BeginPlay();
+
+	CurrentHealth = StartingHealth;
+}
+
 float ATankPawn::GetHealthPercent() const
 {
 	return (float)CurrentHealth / StartingHealth;
